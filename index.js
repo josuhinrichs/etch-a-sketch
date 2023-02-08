@@ -115,6 +115,7 @@ function changeColor(e) {
             break;
         }
         default:{
+            e.target.style.backgroundColor = pickedColor;
             e.target.style.backgroundColor = '#FFFFFF';
             break;
         }
