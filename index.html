@@ -9,8 +9,22 @@
     <title>Etch-a-Sketch</title>
 </head>
 <body>
-    <div id="grid-container">
-
+    <div id="main-title">etch-a-sketch</div>
+    <div id="content-container">
+        <div class="tool-container">
+            <input type="color" id="picked-color" name="picked-color" value="#FFFFFF">
+            <div class="modes-container">
+                <button class="color-button active-button" id="color-mode">color mode</button>
+                <button class="color-button" id="eraser">eraser</button>
+                <button class="color-button" id="crazy-mode">crazy mode</button>
+                <button class="color-button" id="da-vinci">da vinci</button>
+            </div>
+        </div>
+        <div id="grid-container">
+        </div>
+        <div class="tool-container">
+            <button class="special-button" id="clear">clear</button>
+        </div>
     </div>
 </body>
 </html>
