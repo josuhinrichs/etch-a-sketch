@@ -20,15 +20,29 @@ body {
     color: #524656;
 }
 
+#subtitle,
+#slider-subtitle {
+    font-size: 32px;
+    color: #524656;
+}
+
+.title-container,
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
 #grid-container {
     display: flex;
     gap: 0;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 640px;
     height: 640px;
     flex-direction: column;
-    
+    cursor: crosshair;
 }
 
 .child {
@@ -69,18 +83,22 @@ body {
 #content-container {
     flex-direction: row;
     gap: 45px;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .tool-container {
+    display: flex;
     align-items: center;
     flex-direction: column;
     font-size: 32px;
-    gap: 30px
+    gap: 30px;
+    flex-shrink: 1;
 }
 
 input[type="color"] {
-    -webkit-appearance: none;
+    appearance: none;
     border: 4px solid #EA7A58;
 }
 input[type="color"]::-webkit-color-swatch-wrapper {
@@ -90,13 +108,17 @@ input[type="color"]::-webkit-color-swatch {
     border: 4px solid #EA7A58;
 }
 
-input {
+input[type="color"] {
     border: 4px solid #EA7A58;
 }
 
-input:hover {
+input[type="color"]:hover {
     transition: transform 0.1s ease-in-out;
     transform: scale(1.05);
+}
+
+input {
+    cursor: pointer;
 }
 
 button {
@@ -105,6 +127,8 @@ button {
     background-color: #E4DCCB;
     color: #EA7A58;
     border: 4px solid #EA7A58;
+    cursor: pointer;
+    flex-shrink: 2;
 }
 
 button:hover {
@@ -122,4 +146,23 @@ button:hover {
     background-color: #CF4747;
     color: white;
     border: 0;
+    width: 216px;
+    height: 60px;
+}
+
+.slide-container {
+    width: 100%;
+}
+
+.slider {
+    appearance: none;
+    background-color: white;
+    height: 20px;
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 9px;
+    height: 30px;
+    background-color: #524656;
 }

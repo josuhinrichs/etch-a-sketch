@@ -9,7 +9,14 @@
     <title>Etch-a-Sketch</title>
 </head>
 <body>
-    <div id="main-title">etch-a-sketch</div>
+    <div class="title-container">
+        <div id="main-title">
+            etch-a-sketch
+        </div>
+        <div id="subtitle">
+            click on the canvas to enable/disable your brush!
+        </div>
+    </div>
     <div id="content-container">
         <div class="tool-container">
             <input type="color" id="picked-color" name="picked-color" value="#FFFFFF">
@@ -23,6 +30,10 @@
         <div id="grid-container">
         </div>
         <div class="tool-container">
+            <div class="slider-container">
+                <div id="slider-subtitle">16x16</div>
+                <input type="range" value="16" min="16" max="96" step="16" class="slider" id="range-slider">
+            </div>
             <button class="special-button" id="clear">clear</button>
         </div>
     </div>
